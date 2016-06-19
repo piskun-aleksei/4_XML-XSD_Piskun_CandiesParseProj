@@ -1,0 +1,184 @@
+<candies xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns="http://www.example.com/candies_schema"
+                   xsi:schemaLocation="http://www.example.com/candies_schema ">
+    <jellybean name="Jelly" type="filled">
+        <energy>500</energy>
+        <value>
+            <proteins>100</proteins>
+            <fats>50</fats>
+            <carbohydrates>20</carbohydrates>
+        </value>
+        <production>JellyFactory</production>
+        <ingredients>
+            <sugar>50</sugar>
+            <water>100</water>
+            <jelly>50</jelly>
+        </ingredients>
+    </jellybean>
+
+    <chocolate name="Choco" type="unfilled">
+        <energy>500</energy>
+        <value>
+            <proteins>100</proteins>
+            <fats>50</fats>
+            <carbohydrates>20</carbohydrates>
+        </value>
+        <production>ChocoFactory</production>
+        <ingredients>
+            <sugar>50</sugar>
+            <water>100</water>
+            <cocoa>50</cocoa>
+        </ingredients>
+    </chocolate>
+
+    <chocolate name="ChocoCococ" type="filled">
+        <energy>700</energy>
+        <value>
+            <proteins>20</proteins>
+            <fats>10</fats>
+            <carbohydrates>50</carbohydrates>
+        </value>
+        <production>ChocoFactoryClone</production>
+        <ingredients>
+            <sugar>110</sugar>
+            <water>50</water>
+            <cocoa>70</cocoa>
+        </ingredients>
+    </chocolate>
+
+    <chocolate name="ChocoBono">
+        <energy>800</energy>
+        <value>
+            <proteins>40</proteins>
+            <fats>500</fats>
+            <carbohydrates>40</carbohydrates>
+        </value>
+        <production>ChocoFactory</production>
+        <ingredients>
+            <sugar>150</sugar>
+            <water>20</water>
+            <cocoa>80</cocoa>
+        </ingredients>
+    </chocolate>
+
+    <jellybean name="JellyFrelly">
+        <energy>500</energy>
+        <value>
+            <proteins>10</proteins>
+            <fats>20</fats>
+            <carbohydrates>30</carbohydrates>
+        </value>
+        <production>JellyFactoryClone</production>
+        <ingredients>
+            <sugar>200</sugar>
+            <water>50</water>
+            <jelly>70</jelly>
+        </ingredients>
+    </jellybean>
+
+    <chocolate name="ChocoBoy" type="unfilled">
+        <energy>100</energy>
+        <value>
+            <proteins>200</proteins>
+            <fats>70</fats>
+            <carbohydrates>10</carbohydrates>
+        </value>
+        <production>ChocoFactoryClone</production>
+        <ingredients>
+            <sugar>20</sugar>
+            <water>120</water>
+            <cocoa>30</cocoa>
+        </ingredients>
+    </chocolate>
+
+    <jellybean name="JellyBean">
+        <energy>500</energy>
+        <value>
+            <proteins>10</proteins>
+            <fats>50</fats>
+            <carbohydrates>10</carbohydrates>
+        </value>
+        <production>JellyFactory</production>
+        <ingredients>
+            <sugar>50</sugar>
+            <water>10</water>
+            <jelly>10</jelly>
+        </ingredients>
+    </jellybean>
+
+    <chocolate name="Chocolatto" type="unfilled">
+        <energy>5600</energy>
+        <value>
+            <proteins>10</proteins>
+            <fats>500</fats>
+            <carbohydrates>200</carbohydrates>
+        </value>
+        <production>ChocoFactory</production>
+        <ingredients>
+            <sugar>500</sugar>
+            <water>10</water>
+            <cocoa>500</cocoa>
+        </ingredients>
+    </chocolate>
+
+    <chocolate name="ChocoMoko" type="filled">
+        <energy>70</energy>
+        <value>
+            <proteins>200</proteins>
+            <fats>105</fats>
+            <carbohydrates>50</carbohydrates>
+        </value>
+        <production>ChocoFactoryClone</production>
+        <ingredients>
+            <sugar>110</sugar>
+            <water>50</water>
+            <cocoa>70</cocoa>
+        </ingredients>
+    </chocolate>
+
+    <chocolate name="ChocoBrono">
+        <energy>800</energy>
+        <value>
+            <proteins>40</proteins>
+            <fats>500</fats>
+            <carbohydrates>40</carbohydrates>
+        </value>
+        <production>ChocoFactory</production>
+        <ingredients>
+            <sugar>150</sugar>
+            <water>200</water>
+            <cocoa>800</cocoa>
+        </ingredients>
+    </chocolate>
+
+    <jellybean name="JellyFrellier">
+        <energy>500</energy>
+        <value>
+            <proteins>10</proteins>
+            <fats>20</fats>
+            <carbohydrates>300</carbohydrates>
+        </value>
+        <production>JellyFactoryClone</production>
+        <ingredients>
+            <sugar>200</sugar>
+            <water>500</water>
+            <jelly>700</jelly>
+        </ingredients>
+    </jellybean>
+
+    <chocolate name="ChocoGirl" type="unfilled">
+        <energy>1000</energy>
+        <value>
+            <proteins>20</proteins>
+            <fats>70</fats>
+            <carbohydrates>10</carbohydrates>
+        </value>
+        <production>ChocoFactoryClone</production>
+        <ingredients>
+            <sugar>200</sugar>
+            <water>120</water>
+            <cocoa>300</cocoa>
+        </ingredients>
+    </chocolate>
+
+</candies>

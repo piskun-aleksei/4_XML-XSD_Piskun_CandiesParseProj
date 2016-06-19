@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://www.example.com/candies_schema"
+        xmlns:tns="http://www.example.com/candies_schema"
+        elementFormDefault="qualified">
+
+    <complexType name="Candy">
+        <sequence>
+            <element name="energy">
+                <simpleType>
+                    <restriction base="string">
+                        <pattern value="[1-9]{1,1}[0-9]{1,5}"/>
+                    </restriction>
+                </simpleType>
+            </element>
+            <element name="value" type="tns:Value"/>
+            <element name="production">
+                <simpleType>
+                    <restriction base="string">
+                        <pattern value="[A-z ]{1,20}"/>
+                    </restriction>
+                </simpleType>
+            </element>
+        </sequence>
+        <attribute name="name" use="required">
+            <simpleType>
+                <restriction base="ID">
+                    <pattern value="[A-z ]{1,15}"/>
+                </restriction>
+            </simpleType>
+        </attribute>
+        <attribute name="type" use="optional" default="unfilled">
+            <simpleType>
+                <restriction base="string">
+                    <enumeration value="filled"></enumeration>
+                    <enumeration value="unfilled"></enumeration>
+                </restriction>
+            </simpleType>
+        </attribute>
+    </complexType>
+
+    <complexType name="JellyBean">
+        <complexContent>
+            <extension base="tns:Candy">
+                <sequence>
+                    <element name="ingredients" type="tns:JellyIngredients"/>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+    <complexType name="Chocolate">
+        <complexContent>
+            <extension base="tns:Candy">
+                <sequence>
+                    <element name="ingredients" type="tns:ChocolateIngredients"/>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+    <element name="candies">
+        <complexType>
+            <sequence>
+                <element ref="tns:candy" minOccurs="2" maxOccurs="unbounded"/>
+            </sequence>
+        </complexType>
+    </element>
+
+    <complexType name="Value">
+        <sequence>
+            <element name="proteins">
+                <simpleType>
+                    <restriction base="string">
+                        <pattern value="[1-9]{1,1}[0-9]{1,5}"/>
+                    </restriction>
+                </simpleType>
+            </element>
+            <element name="fats">
+                <simpleType>
+                    <restriction base="string">
+                        <pattern value="[1-9]{1,1}[0-9]{1,5}"/>
+                    </restriction>
+                </simpleType>
+            </element>
+            <element name="carbohydrates">
+                <simpleType>
+                    <restriction base="string">
+                        <pattern value="[1-9]{1,1}[0-9]{1,5}"/>
+                    </restriction>
+                </simpleType>
+            </element>
+        </sequence>
+    </complexType>
+
+    <complexType name="BaseIngredients">
+        <sequence>
+            <element name="sugar">
+                <simpleType>
+                    <restriction base="string">
+                        <pattern value="[1-9]{1,1}[0-9]{1,5}"/>
+                    </restriction>
+                </simpleType>
+            </element>
+            <element name="water">
+                <simpleType>
+                    <restriction base="string">
+                        <pattern value="[1-9]{1,1}[0-9]{1,5}"/>
+                    </restriction>
+                </simpleType>
+            </element>
+        </sequence>
+    </complexType>
+
+    <complexType name="JellyIngredients">
+        <complexContent>
+            <extension base="tns:BaseIngredients">
+                <sequence>
+                    <element name="jelly">
+                        <simpleType>
+                            <restriction base="string">
+                                <pattern value="[1-9]{1,1}[0-9]{1,5}"/>
+                            </restriction>
+                        </simpleType>
+                    </element>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+    <complexType name="ChocolateIngredients">
+        <complexContent>
+            <extension base="tns:BaseIngredients">
+                <sequence>
+                    <element name="cocoa">
+                        <simpleType>
+                            <restriction base="string">
+                                <pattern value="[1-9]{1,1}[0-9]{1,5}"/>
+                            </restriction>
+                        </simpleType>
+                    </element>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+    <element name="candy" type="tns:Candy" abstract="true"></element>
+    <element name="jellybean" type="tns:JellyBean" substitutionGroup="tns:candy"></element>
+    <element name="chocolate" type="tns:Chocolate" substitutionGroup="tns:candy"></element>
+</schema>
